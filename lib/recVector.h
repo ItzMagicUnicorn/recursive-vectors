@@ -25,6 +25,11 @@ void pushFront(RecVOV &v, int val);
 void pushBack(RecVOV &v, int val);
 void insert(RecVOV &v, int pos, int val);
 
+// ------- Erase functions -------
+void erase(RecVOV &v, int val);
+void eraseAll(RecVOV &v, int val);
+void eraseAt(RecVOV &v, int pos);
+
 // ------- Search functions -------
 int search(RecVOV &v, int val, int &pos);
 
