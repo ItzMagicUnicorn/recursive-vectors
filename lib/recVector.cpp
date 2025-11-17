@@ -92,11 +92,9 @@ void insert(RecVOV &v, int pos, int val) {
 }
 
 // ------- Erase functions -------
-<<<<<<< HEAD
 void erase(RecVOV &v, int val) {
-	if (v.i == v.count) {
-		endProcessing(v, v.count);
-	}
+	if (v.i == v.count) endProcessing(v, v.count);
+
 	if (v.i<v.count) {
 		if (v.vector[v.i] != val) {
 			v.i++;
@@ -108,14 +106,14 @@ void erase(RecVOV &v, int val) {
 		}
 	}
 }
-void eraseAt(RecVOV& v, int pos) {
+
+void eraseAt(RecVOV &v, int pos) {
 	shiftLeft(v, pos);
 	endProcessing(v, v.count - 1);
 }
-void eraseAll(RecVOV&v, int val) {
-	if(v.i==v.count){
-	endProcessing(v, v.count);
-	}
+
+void eraseAll(RecVOV &v, int val) {
+	if(v.i==v.count) endProcessing(v, v.count);
 	if (v.i < v.count) {
 		if (v.vector[v.i] != val) {
 			v.i++;
@@ -126,8 +124,9 @@ void eraseAll(RecVOV&v, int val) {
 			endProcessing(v, v.count - 1);
 			erase(v, val);
 		}
+	}
 }
-}
+
 // ------- Search functions -------
 bool search(RecVOV &v, int val, int& pos);
 
