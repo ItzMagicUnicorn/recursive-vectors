@@ -94,7 +94,7 @@ void eraseAll(RecVOV &v, int val);
 // PRE:  v is properly initialized
 // POST: searches for val in v. returns true if the search
 // 		 was successful and stores the position of the first
-// 		 occurence of val in pos. Returns false otherwise.
+// 		 occurence of val in pos. Returns false otherwise and pos = -1.
 bool search(RecVOV &v, int val, int &pos);
 
 // ------- Arithmetic functions -------

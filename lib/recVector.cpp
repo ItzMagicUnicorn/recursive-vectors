@@ -127,7 +127,21 @@ void eraseAll(RecVOV &v, int val) {
 }
 
 // ------- Search functions -------
-bool search(RecVOV &v, int val, int& pos);
+bool search(RecVOV &v, int val, int& pos) {
+	if(v.i == v.count){
+		pos = - 1;
+		endProcessing(v, v.count);
+	}
+	if (v.i < v.count){
+		if (v.vector[v.i] == val){
+			return 1;
+		}
+		else{
+			pos++;
+			search (v, val, pos);
+		}
+	}
+}
 
 // ------- Arithmetic functions -------
 void add(RecVOV &v, RecVOV &w, RecVOV &r) {
